@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaypee Cabahit - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: transparent;
+            border-radius: 0;
+            box-shadow: none;
+            min-height: 300px; /* Fixed height for consistency */
+        }
+
+        .contact-form h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-form p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .contact-form input, .contact-form textarea, .contact-form select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .contact-form input::placeholder, .contact-form textarea::placeholder {
+            color: #ccc;
+        }
+
+        .contact-form button {
+            width: 100%;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .contact-form button:hover {
+            background-color: #e68900;
+        }
+
+        .icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ccc;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            padding-left: 40px;
+        }
+
+        /* Thank You Message Styling */
+        .thank-you-message {
+            display: none;
+            text-align: center;
+            color: #ff9800;
+            font-size: 18px; /* Reduced font size for consistency */
+            font-weight: bold;
+            margin-top: 20px;
+            min-height: 300px; /* Fixed height to match form */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Jaypee Cabahit</h1>
+</header>
+
+<nav>
+    <a href="index.html">About Me</a>
+    <a href="skills.html">Skills</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html" class="active">Contact</a>
+</nav>
+
+<div class="container">
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>I’ll get back to you as soon as possible.</p>
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="form-group">
+                    <i class="icon">&#128100;</i>
+                    <input type="text" name="fullname" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <i class="icon">&#9993;</i>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <i class="icon">&#9998;</i>
+                    <select name="subject" required>
+                        <option value="" disabled selected>Subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="hire">Hire Me</option>
+                        <option value="support">Support</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="thank-you-message" id="thankYouMessage">
+                Unable to process message, Try again later.
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Jaypee Cabahit. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/cabahitjaypee/" target="_blank">
+            <img src="images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/cabahitjp/" target="_blank">
+            <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/EXEWiseRBLX" target="_blank">
+            <img src="images/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://github.com/DPOAdmin" target="_blank">
+            <img src="images/github.png" alt="Github">
+        </a>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+        document.getElementById('thankYouMessage').style.display = 'block'; // Show the thank you message
+        document.getElementById('contactForm').style.display = 'none'; // Hide the form
+    });
+</script>
+
+</body>
+</html>
