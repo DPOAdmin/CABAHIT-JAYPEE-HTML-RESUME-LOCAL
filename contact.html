@@ -4,44 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaypee Cabahit - Contact</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <!-- External Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <style>
         .contact-form {
-            max-width: 600px;
+            max-width: 800px; /* Increased the max-width to make the form larger */
             margin: 0 auto;
-            padding: 20px;
+            padding: 30px; /* Added more padding for better spacing */
             background-color: transparent;
             border-radius: 0;
             box-shadow: none;
-            min-height: 300px; /* Fixed height for consistency */
-        }
-
-        .contact-form h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .contact-form p {
-            margin-bottom: 20px;
-            color: #666;
-        }
-
-        .contact-form .form-group {
-            margin-bottom: 15px;
-            position: relative;
+            min-height: 400px; /* Increased height for a larger form */
         }
 
         .contact-form input, .contact-form textarea, .contact-form select {
             width: 100%;
-            padding: 10px;
-            font-size: 16px;
+            padding: 15px; /* Increased padding for larger input fields */
+            font-size: 18px; /* Increased font size */
             border: 1px solid #ddd;
             border-radius: 10px;
             box-sizing: border-box;
         }
 
-        .contact-form input::placeholder, .contact-form textarea::placeholder {
-            color: #ccc;
+        .contact-form textarea {
+            height: 150px; /* Increased height for the message textarea */
         }
 
         .contact-form button {
@@ -49,15 +37,25 @@
             background-color: #ff9800;
             color: white;
             border: none;
-            padding: 15px;
+            padding: 18px; /* Increased padding for a larger button */
             border-radius: 30px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px; /* Increased font size */
             font-weight: bold;
         }
 
         .contact-form button:hover {
             background-color: #e68900;
+        }
+
+        .thank-you-message {
+            display: none;
+            text-align: center;
+            color: #ff9800;
+            font-size: 20px; /* Adjusted font size */
+            font-weight: bold;
+            margin-top: 20px;
+            min-height: 300px; /* Fixed height to match form */
         }
 
         .icon {
@@ -70,17 +68,6 @@
 
         .form-group input, .form-group select, .form-group textarea {
             padding-left: 40px;
-        }
-
-        /* Thank You Message Styling */
-        .thank-you-message {
-            display: none;
-            text-align: center;
-            color: #ff9800;
-            font-size: 18px; /* Reduced font size for consistency */
-            font-weight: bold;
-            margin-top: 20px;
-            min-height: 300px; /* Fixed height to match form */
         }
     </style>
 </head>
@@ -151,6 +138,7 @@
     </div>
 </footer>
 
+<!-- JavaScript to handle form submission -->
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the form from submitting
